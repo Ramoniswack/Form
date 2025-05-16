@@ -16,10 +16,13 @@ const FillForm = () => {
   return (
     <>
 
-      <div className="items-center justify-center flex  w-full h-screen bg-gray-100 overflow-hidden">
-   
-      <form onSubmit={handleSubmit(onSubmit)} className="bg-white shadow-md px-8 pt-6 pb-8 mb-10 rounded-2xl">
-        <div class="text-2xl py-4 px-6 bg-gray-900 text-white text-center font-bold uppercase rounded">
+<div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
+  <form
+    onSubmit={handleSubmit(onSubmit)}
+    className="w-full max-w-md bg-white shadow-lg rounded-2xl px-6 py-8 space-y-5"
+  >
+
+        <div className="text-2xl py-4 px-6 bg-gray-900 text-white text-center font-bold uppercase rounded ">
         Form
     </div> 
     <br/><br/>
@@ -40,7 +43,7 @@ const FillForm = () => {
           })}
         />
         {errors.name && (
-          <p className=" text-red-500">
+          <p className=" text-red-500 text-sm min-h-[1.125rem]">
             {errors.name.message}
           </p>
         )}
@@ -60,7 +63,7 @@ const FillForm = () => {
             },
           })}
         />
-        {errors.email && <p>{errors.email.message}</p>}
+        {errors.email && <p className="text-red-500 text-sm min-h-[1.125rem]">{errors.email.message}</p>}
 
            </div>
       <div className="flex flex-col mb-4">
@@ -80,7 +83,7 @@ const FillForm = () => {
           },
         })}
         />
-        {errors.password && <p className=" text-red-500">{errors.password.message}</p>}
+        {errors.password && <p className=" text-red-500 text-sm min-h-[1.125rem] ">{errors.password.message}</p>}
 
         </div>
 
@@ -100,7 +103,7 @@ const FillForm = () => {
             },
           })}
           />
-        {errors.phone && <p className=" text-red-500">{errors.phone.message}</p>}
+        {errors.phone && <p className=" text-red-500 text-sm min-h-[1.125rem]">{errors.phone.message}</p>}
       </div>
 
       <div className="flex flex-col mb-4">
@@ -117,7 +120,7 @@ const FillForm = () => {
             },
           })}
         />
-        {errors.address && <p className=" text-red-500">{errors.address.message}</p>}
+        {errors.address && <p className=" text-red-500 text-sm min-h-[1.125rem]">{errors.address.message}</p>}
 
 
 
